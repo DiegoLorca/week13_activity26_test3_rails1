@@ -1,0 +1,20 @@
+<h1>Listado de ToDo</h1>
+  <div class="well">
+      <div class="container">
+
+          <% @todos.each do |todo| %>
+            <h2> <%= todo.description %>
+            <%= todo.completed %></h2>
+
+          <p> <%= link_to 'Ver', todo %> </p>
+          <p> <%= link_to 'Editar', edit_todo_path(todo) %> </p>
+          <p> <%= link_to 'Borrar', todo, method: :delete %> </p>
+          <p class="btn btn-info"> <%= link_to 'Completado', todos_path %> </p>
+
+            <!-- <input type="checkbox" name="completed"> -->
+          <% end %>
+      </div>
+  </div>
+  <div class="container">
+    <%= link_to "Crear un ToDo nuevo", todos_new_path %>
+  </div>
