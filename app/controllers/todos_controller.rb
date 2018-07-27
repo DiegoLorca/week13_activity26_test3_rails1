@@ -47,7 +47,7 @@ class TodosController < ApplicationController
 
   def list
     @todos = Todo.all
-    debugger
+    # debugger
   end
 
   private
