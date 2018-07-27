@@ -1,2 +1,8 @@
-<h1>Vista de ToDo</h1>
-<h2> <%= @todo.description %> <%= @todo.completed %> </h2>
+<div class="container">
+  <h1>Vista de ToDo</h1>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h2> <%= @todo.description %> <span class="badge"> <%= @todo.completed %> </span>  </h2>
+    </div>
+  </div>
+</div>
