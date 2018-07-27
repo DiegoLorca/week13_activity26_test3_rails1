@@ -11,7 +11,7 @@ class TodosController < ApplicationController
     @todo = Todo.new(todo_params)
     # if @todo.save
     #   flash[:notice] = "Descripción guardada correctamente."
-      redirect_to todos_path
+    redirect_to todos_path
     # else
     #   flash.now[:alert] = "Error: #{@todo.errors.full_messages.join(', ')} "
     #   render todos_new_path
@@ -46,11 +46,12 @@ class TodosController < ApplicationController
   end
 
   def list
-      @todos = Todo.all
+    @todos = Todo.all
+    debugger
   end
 
   private
   def todo_params
-    params.require(:todo).permit(:description)
+    params.require(:todo).permit(:description, :completed)
   end
 end
