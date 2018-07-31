@@ -9,6 +9,7 @@ class TodosController < ApplicationController
 
   def create
     @todo = Todo.new(todo_params)
+    @todo.save
     # if @todo.save
     #   flash[:notice] = "Descripción guardada correctamente."
     redirect_to todos_path
